@@ -5,14 +5,14 @@ public class Members implements Comparable<Object> {
 	private int ID;
 	private int Age;
 	private String Country;
-	private String sportType;
+	// private String sportType;
 
-	public Members(String Name, int ID, int Age, String Country, String sportType) {
+	public Members(String Name, int ID, int Age, String Country) {
 		this.setName(Name);
 		this.setID(ID);
 		this.setAge(Age);
 		this.setCountry(Country);
-		this.setSportType(sportType);
+		// this.setSportType(sportType);
 	}
 
 	public String getName() {
@@ -45,14 +45,6 @@ public class Members implements Comparable<Object> {
 
 	public void setCountry(String country) {
 		Country = country;
-	}
-
-	public String getSportType() {
-		return sportType;
-	}
-
-	public void setSportType(String sportType) {
-		this.sportType = sportType;
 	}
 
 	@Override
