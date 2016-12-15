@@ -1,6 +1,6 @@
 package ESS;
 
-public class Referee extends Members{
+public class Referee extends Member{
 	private String sportType;
 	public Referee(String Name, int ID, int Age, String Country) {
 		super(Name, ID, Age, Country);

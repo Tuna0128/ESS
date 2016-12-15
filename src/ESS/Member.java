@@ -1,13 +1,13 @@
 package ESS;
 
-public class Members implements Comparable<Object> {
+public class Member implements Comparable<Object> {
 	private String Name;
 	private int ID;
 	private int Age;
 	private String Country;
 	// private String sportType;
 
-	public Members(String Name, int ID, int Age, String Country) {
+	public Member(String Name, int ID, int Age, String Country) {
 		this.setName(Name);
 		this.setID(ID);
 		this.setAge(Age);

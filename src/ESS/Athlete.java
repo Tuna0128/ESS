@@ -1,12 +1,12 @@
 package ESS;
 
-public class Athletes extends Members{
+public class Athlete extends Member{
 	private String sportType;
-	public Athletes(String Name, int ID, int Age, String Country) {
+	public Athlete(String Name, int ID, int Age, String Country) {
 		super(Name, ID, Age, Country);
 	}
 	
-	public Athletes(String Name, int ID, int Age, String Country,String sportType) {
+	public Athlete(String Name, int ID, int Age, String Country,String sportType) {
 		super(Name, ID, Age, Country);
 		this.setSportType(sportType);
 	}
