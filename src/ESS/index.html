@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>觀迎光臨-世界大學運動會-首頁</title>
+        <style>
+            a, a:hover {
+                text-decoration: none;
+            }
+
+            /**********/
+
+            ul#navWrapper {
+                border: 0 black dashed;
+                margin-left: -39px;
+                float: left;
+            }
+
+            ul#navWrapper li {   
+                float: left;
+                list-style: none;
+                margin-right: 0.8em;
+                background-color: rgb(121, 255, 49);
+                padding: 0 0.3em;
+                border-radius: 4px;
+            }
+
+            ul#navWrapper li li {
+                border: 0 blue dashed;    
+                float: none;
+                margin-left: -44px;
+                margin-top: 3px;
+            }
+
+            ul#navWrapper li li:first-child { 
+                margin-top: 4px;
+            }
+
+            ul#navWrapper ul {
+                display: none;
+                position: absolute;
+                background-color: #FFF;
+                background-color: rgba(255, 255, 255, 0);
+            }
+
+            ul#navWrapper li:hover ul {
+                display: block;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>觀迎光臨 世界大學運動會-資訊導覽</h1>
+        <ul id="navWrapper"> 
+            <li>
+                <a>場館鄰近服務單位</a>
+                <ul>
+                    <li><a href="hospital.html">場館鄰近醫院</a></li>
+                    <li><a href="Police.html">場館鄰近警察局</a></li>
+                </ul>
+            </li>
+            <li>
+                <a>各競賽場地點</a>
+                <ul>
+                    <li><a href="baseball.html">棒球</a></li>
+                    <li><a href="basketball.html">籃球</a></li>
+                    <li><a href="badminton.html">羽球</a></li>        
+                </ul>
+            </li>
+        </ul>
+    </body>
+</html>
