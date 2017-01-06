@@ -205,6 +205,8 @@ public class GUI extends JFrame {
 				String resultStr = "";
 				String searchStr = JOptionPane.showInputDialog(dataPan, "請輸入查詢項目", "輸入", mType );
 				for (int i = 0;i<teamModel.getSize();i++){
+					if(searchStr=="")
+						break;
 					if (((String) teamModel.getElementAt(i)).indexOf(searchStr) != -1) 
 			            resultStr += timeModel.getElementAt(i)+" "+typeModel.getElementAt(i)+" "+
 			            		teamModel.getElementAt(i)+" "+venueModel.getElementAt(i)+"\n";
