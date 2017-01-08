@@ -84,10 +84,9 @@ public class ChangeOptionPane implements ActionListener {
 
 	private void changeOperation(DefaultListModel inputModel, DefaultListModel timeModel,Venues[] venueList,int venueCounter) {
 		List<String> venueAL = new ArrayList<String>();
-		System.out.println(venueCounter);
+		//int counter = 0;
 		for (int i = 0; i < venueCounter; i++) {
-			if (venueList[i].getSportType().equals(typeModel.getElementAt(value)))
-				venueAL.add(1+" "+venueList[i].getName());
+			venueAL.add((i + 1) + " " + venueList[i].getName());
 		}
 		
 		while (true) {
@@ -104,14 +103,14 @@ public class ChangeOptionPane implements ActionListener {
 				for (int i = 0; i < timeModel.getSize(); i++){
 					System.out.println("time:"+timeModel.getElementAt(i)+" "+timeModel.getElementAt(value)+
 							"venue:"+inputModel.getElementAt(i)+" "+venueList[change].getName());
-					/*String buff = (String)timeModel.getElementAt(i);
+					String buff = (String)timeModel.getElementAt(i);
 					String time1 = buff.split(" ")[0];
 					buff = (String)timeModel.getElementAt(value);
-					String time2 = buff.split(" ")[0];*/
-					if (timeModel.getElementAt(i).equals(timeModel.getElementAt(value)) && 
+					String time2 = buff.split(" ")[0];
+					if (time1.equals(time2) && 
 							inputModel.getElementAt(i).equals(venueList[change].getName())){
 						System.out.println("inner loop i:"+i);
-						String buff = (String) inputModel.getElementAt(value);
+						buff = (String) inputModel.getElementAt(value);
 						inputModel.set(value, inputModel.getElementAt(i));
 						inputModel.set(i, buff);
 						break;

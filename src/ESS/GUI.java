@@ -189,9 +189,9 @@ public class GUI extends JFrame {
 
 							System.out.println("08/" + (19 + i) + " " + timeMap.get(j) + " "
 									+ type + " " + Team1 + " vs. " + Team2 + " " + Venue.getName());
-							for (int k = 0; k < venueSelect.length; k++)
-								venueSelect[k] = 0;
 						}
+						for (int k = 0; k < venueSelect.length; k++)
+							venueSelect[k] = 0;
 					}
 					for (int k = 0; k < teamSelect.length; k++)
 						teamSelect[k] = 0;
@@ -214,7 +214,6 @@ public class GUI extends JFrame {
 				}
 			}
 		});
-
 		changeBtn.setForeground(new Color(51, 153, 255));
 		changeBtn.setBackground(new Color(51, 51, 51));
 		controlPan.add(changeBtn);
@@ -225,7 +224,7 @@ public class GUI extends JFrame {
 				String resultStr = "";
 				String searchStr = JOptionPane.showInputDialog(dataPan, "<html><font color=white>請輸入查詢項目</font><p></html>", "輸入", mType);
 				for (int i = 0; i < teamModel.getSize(); i++) {
-					if (searchStr == "" || searchStr == "-1")
+					if (searchStr == "" || searchStr == "0" || searchStr == "-1")
 						break;
 					else {
 						if (((String) teamModel.getElementAt(i)).indexOf(searchStr) != -1)
@@ -248,6 +247,14 @@ public class GUI extends JFrame {
 		
 		addBtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				int mType = JOptionPane.QUESTION_MESSAGE;
+				
+				String[] selectType = { "未選取", "更換隊伍", "更換場地", "更換日期" };
+				String getSelect = (String) JOptionPane.showInputDialog(null, "<html><font color=white>請選擇更換項目</font><p></html>", 
+						"選取", mType, null, selectType, "未選取");
+				
+				String resultStr = "";
+				String searchStr = JOptionPane.showInputDialog(dataPan, "<html><font color=white>請輸入查詢項目</font><p></html>", "輸入", mType);
 				
 			}
 		});
